@@ -10,7 +10,7 @@ import Maitenance from './views/Maitenance';
 import NotFound from './views/NotFound';
 import './index.css';
 import { Stack, Image } from 'react-bootstrap';
-import { Github, Linkedin, Tiktok, Youtube } from 'react-bootstrap-icons';
+import { Github, Tiktok, Youtube } from 'react-bootstrap-icons';
 
 export default function App() {
   return (
