@@ -1,6 +1,9 @@
+import { useEffect } from 'react'
 import Modal from 'react-bootstrap/Modal';
 
 export default function GamePlayer(props) {
+    useEffect(() => {}, [props.game.source]);
+
     return (
         <Modal
             {...props}
@@ -16,7 +19,7 @@ export default function GamePlayer(props) {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <iframe width='100%' frameborder='0' src='https://itch.io/embed-upload/9176418?color=333333' allowfullscreen='' height='560'><a href={props.game.source}>Play on itch.io</a></iframe>
+                <iframe width='100%' frameborder='0' src={props.game.gameLink} allowfullscreen='' height={props.game.gameHeight}><a href={props.game.source}>Play on itch.io</a></iframe>
             </Modal.Body>
         </Modal>
     );

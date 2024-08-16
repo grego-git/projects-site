@@ -38,7 +38,29 @@
         "cdCover": "PowerPunchCDCover.png",
         "description": "Power Punch is a <b>personal passion project</b> of mine. It's a traditional fighting game inspired by classic Capcom fighters (<i>Street Fighter, Marvel Vs Capcom, Rival Schools, etc.</i>). My main goal was to <b>develop one character with a full move-set within a month</b>. Over time I found that creating unique, but clear and concise, attack animations to be a lot <b>more difficult than anticipated</b>. Eventually I was able to develop my characters normals, specials, and grabs, and released this training mode like stage.<br/><br/>Although this game is still in development, I have <b>shifted development over from Unity to Godot</b>, since Unity attempted to enforce their new pricing model of 0.2 cents per download. I figured I'd rather develop on an open source platform, as to avoid curve balls like that.",
         "requiresDownload" : false,
-        "source": "https://grego-games.itch.io/power-punch-training-mode"
+        "source": "https://grego-games.itch.io/power-punch-training-mode",
+        "gameLink": "https://itch.io/embed-upload/9176418?color=333333",
+        "gameWidth": 960,
+        "gameHeight": 560
+    },
+    {
+        "name": "Christmasvania",
+        "engine": "Unity",
+        "language": "C#/.NET",
+        "created": "December 2020",
+        "cdCover": "ChristmasvaniaCDCover.png",
+        "description": "Christmasvania is a <b>Christmas themed Castlevania parody game</b>. You play as Atnas, Santa's vampire hunting son, as he makes his way through Santa's factory to put a stop to Dracula, who has taken possession of old St. Nick, and has let loose his minions throughout the North Pole.<br/><br/>I took some time over the holidays to develop this game. Movement and behavior was based on the original Castlevania (<i>Which may cause some frustrations among players… apologies in advance</i>), with the final boss fight echoing that of the one in the original game. Overall there's some <i><b>charm</b></i> to this title, however some <b>art assets could use some touching up</b>, and it <b>could use better music</b>.",
+        "requiresDownload" : false,
+        "source": "https://grego-games.itch.io/christmasvania",
+        "gameLink": "https://itch.io/embed-upload/3142555?color=000000",
+        "gameWidth": 960,
+        "gameHeight": 740,
+        "screenshots": [
+            "Christmasvania_1.png",
+            "Christmasvania_2.png",
+            "Christmasvania_3.png",
+            "Christmasvania_4.png"
+        ]
     },
     {
         "name": "Ultra Caveman Spheres",
