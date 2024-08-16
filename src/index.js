@@ -44,7 +44,6 @@ export default function App() {
         <a target='_blank' rel='noopener noreferrer' href='https://www.youtube.com/@grego4108'><Youtube color='white' size={24}></Youtube></a>
         <a target='_blank' rel='noopener noreferrer' href='https://www.tiktok.com/@grego_io?lang=en'><Tiktok color='white' size={24}></Tiktok></a>
         <a target='_blank' rel='noopener noreferrer' href='https://grego-games.itch.io/'><img alt='itch.io' style={{width: 24, height: 24, filter: 'invert(100%) sepia(98%) saturate(0%) hue-rotate(147deg) brightness(93%) contrast(101%)'}} src={'https://static.itch.io/images/itchio-textless-black.svg'}></img></a>
-        <a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/gregorio-l-392430172/'><Linkedin color='white' size={24}></Linkedin></a>
         <a target='_blank' rel='noopener noreferrer' href='https://github.com/grego-git'><Github color='white' size={24}></Github></a>
       </Stack>
     </>
