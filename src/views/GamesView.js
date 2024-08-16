@@ -24,10 +24,10 @@ export default function GamesView() {
   }, []);
 
   return (
-    <div style={{ margin: '0 auto', padding: '50px 0px' }}>
+    <div style={{ margin: '0 auto', padding: '25px 0px 100px 0px' }}>
       <GamesList games={games} currentGame={currentGame} setCurrentGame={setCurrentGame} setFadeOutGameInfo={setFadeOutGameInfo}></GamesList>
       <br />
-      {currentGame == 0 &&
+      {currentGame === 0 &&
         <PageInfo page='games' transition={fadeOutGameInfo}></PageInfo>}
       {currentGame > 0 &&
         <div>

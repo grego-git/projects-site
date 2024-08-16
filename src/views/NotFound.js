@@ -1,6 +1,6 @@
 export default function NotFound() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', padding: 50 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', padding: '25px 50px 100px 50px' }}>
             <img style={{ maxHeight: 375, margin: '0 auto', filter: 'drop-shadow(0 0 0.25rem black)' }}
                 src={process.env.PUBLIC_URL + 'miscImages/GregoNotFound.png'}
                 alt='grego'></img>
