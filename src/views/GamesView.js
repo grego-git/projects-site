@@ -13,7 +13,7 @@ export default function GamesView() {
   const [showGamePlayer, setShowGamePlayer] = useState(false);
 
   const loadGames = async () => {
-    const response = await fetch('/projects-site/games.json');
+    const response = await fetch(process.env.PUBLIC_URL + 'games.json');
     const json = await response.json();
 
     setGames(json);

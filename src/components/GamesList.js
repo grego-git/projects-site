@@ -30,7 +30,7 @@ export default function GamesList(props) {
         rows.push(
             <img key={0}
                 style={{ margin: '0 auto', maxHeight: 250, display: 'block', filter: 'drop-shadow(0 0 0.25rem black)' }}
-                src={'/projects-site/' + (props.currentGame === 0 ? 'miscImages/GregoLookAtYou.png' : 'miscImages/JustGrego.png')}
+                src={process.env.PUBLIC_URL + (props.currentGame === 0 ? 'miscImages/GregoLookAtYou.png' : 'miscImages/JustGrego.png')}
                 alt='grego'></img>);
 
         for (let i = 0; i < props.games.length; i++) {
@@ -41,7 +41,7 @@ export default function GamesList(props) {
                     focused={props.currentGame === i + 1}
                     id={i}
                     key={i + 1}
-                    texture={game.cdCover ? ('/projects-site/cdTextures/' + game.cdCover) : ''}>
+                    texture={game.cdCover ? (process.env.PUBLIC_URL + 'cdTextures/' + game.cdCover) : ''}>
                 </GameDisc>)
         }
 

@@ -1,4 +1,4 @@
-import { Routes, Route, HashRouter, BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -15,12 +15,12 @@ export default function App() {
     <>
       <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme='dark'>
         <Container>
-          <Navbar.Brand href="/projects-site">grego.io</Navbar.Brand>
+          <Navbar.Brand href="/">grego.io</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/projects-site/games">Games</Nav.Link>
-              <Nav.Link href="/projects-site/models">Models</Nav.Link>
+              <Nav.Link href="games">Games</Nav.Link>
+              <Nav.Link href="models">Models</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -28,9 +28,8 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<GamesView />} />
-          <Route path="/projects-site" element={<GamesView />} />
-          <Route path="/projects-site/games" element={<GamesView />} />
-          <Route path="/projects-site/models" element={<Maitenance />} />
+          <Route path="/games" element={<GamesView />} />
+          <Route path="/models" element={<Maitenance />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -44,7 +44,7 @@ export default function GameDisc(props) {
             interaction='none'
             id={'disc_' + props.id}
             alt='game disc'
-            src={'/projects-site/cd.glb'}
+            src={process.env.PUBLIC_URL + 'cd.glb'}
             auto-rotate={props.focused}
             camera-orbit={props.focused ? '0deg 75deg 4m' : '0deg 75deg 6m'}
             max-camera-orbit={'Infinity 157.5deg 20m'}
