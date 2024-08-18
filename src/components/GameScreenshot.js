@@ -8,7 +8,6 @@ export default function GameScreenshot(props) {
             aria-labelledby='contained-modal-title-vcenter'
             centered
             data-bs-theme='dark'
-            onHide={props.exitScreenshot}
         >
             <Modal.Header closeButton>
                 <Modal.Title id='contained-modal-title-vcenter'>\

@@ -1,43 +1,26 @@
 import { Controller, Download, Github } from 'react-bootstrap-icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Carousel from 'react-multi-carousel';
 import GameScreenshot from './GameScreenshot';
 import '../App.css';
 
-const responsive = {
-    superLargeDesktop: {
-        // the naming can be any, depends on you.
-        breakpoint: { max: 4000, min: 3000 },
-        items: 2
-    },
-    desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 2
-    },
-    tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 1
-    },
-    mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1
-    }
-};
-
 export default function GameInfo(props) {
+    const [screenshotIndex, setScreenshotIndex] = useState(0);
     const [showScreenshotModal, setShowScreenshotModal] = useState(false);
-    const [screenshot, setSceenshot] = useState('');
 
-    const openScreenshotModal = (screenshot) => {
-        setShowScreenshotModal(true);
-        setSceenshot(screenshot);
-    }
+    const handleSelect = (selectedIndex) => {
+        setScreenshotIndex(selectedIndex);
+    };
+
+    useEffect(() => {
+        setScreenshotIndex(0);
+    }, [props.game]);
 
     return (
         <div>
-            <Card data-bs-theme='dark' className={props.transition ? 'fade-out' : 'fade-in'} style={{ margin: '0 auto', maxWidth: '75rem'/*, borderRadius: 0*/ }}>
+            <Card data-bs-theme='dark' className={props.fadeOut ? 'fade-out' : 'fade-in'} style={{ margin: '0 auto', maxWidth: '75rem' }}>
                 <Card.Body>
                     <Card.Title>{props.game.name}</Card.Title>
                     <Card.Subtitle className='mb-2 text-muted'>{props.game.engine} | {props.game.language}</Card.Subtitle>
@@ -46,8 +29,11 @@ export default function GameInfo(props) {
                     {props.game.screenshots && props.game.screenshots.length > 0 &&
                         <div>
                             <hr></hr>
-                            <Carousel responsive={responsive}>
-                                {props.game.screenshots.map((screenshot, index) => <img onClick={() => { openScreenshotModal(process.env.PUBLIC_URL + 'screenshots/' + screenshot) }} style={{ maxHeight: 250, margin: '0 auto', borderRadius: 15, display: 'block' }} alt={screenshot} key={index} src={process.env.PUBLIC_URL + 'screenshots/' + screenshot}></img>)}
+                            <Carousel activeIndex={screenshotIndex} onSelect={handleSelect} interval={null}>
+                                {props.game.screenshots.map((screenshot, index) =>
+                                    <Carousel.Item key={index}>
+                                        <img onClick={() => { setShowScreenshotModal(true) }} style={{ borderRadius: 15, display: 'block', maxHeight: 300, margin: '0 auto' }} alt={screenshot} src={process.env.PUBLIC_URL + 'screenshots/' + screenshot}></img>
+                                    </Carousel.Item>)}
                             </Carousel>
                         </div>}
                     <br />
@@ -65,7 +51,7 @@ export default function GameInfo(props) {
                 </Card.Body>
                 <Card.Footer className='text-muted'>{props.game.created}</Card.Footer>
             </Card>
-            <GameScreenshot screenshot={screenshot} show={showScreenshotModal} exitScreenshot={() => setShowScreenshotModal(false)} />
+            <GameScreenshot screenshot={process.env.PUBLIC_URL + 'screenshots/' + props.game.screenshots[screenshotIndex]} show={showScreenshotModal} onHide={() => setShowScreenshotModal(false)} />
         </div>
     );
 }

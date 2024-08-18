@@ -54,10 +54,10 @@ export default function GamesList(props) {
             responsive={responsive}
             afterChange={(previousSlide, { currentSlide, onMove }) => {
                 props.setCurrentGame(currentSlide);
-                props.setFadeOutGameInfo(false);
+                props.setChangingGame(false);
             }}
             beforeChange={(nextSlide, { currentSlide, onMove }) => {
-                props.setFadeOutGameInfo(true);
+                props.setChangingGame(true);
             }}>
             {listGames()}
         </Carousel>);

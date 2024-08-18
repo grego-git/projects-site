@@ -11,7 +11,6 @@ export default function GamePlayer(props) {
             aria-labelledby='contained-modal-title-vcenter'
             centered
             data-bs-theme='dark'
-            onHide={props.exitGame}
         >
             <Modal.Header closeButton>
                 <Modal.Title id='contained-modal-title-vcenter'>

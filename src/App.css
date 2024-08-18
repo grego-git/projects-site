@@ -35,3 +35,20 @@ body {
 		opacity: 0;
 	}
 }
+
+.carousel-control-prev-icon {
+    filter: none !important;
+}
+
+.carousel-control-next-icon {
+    filter: none !important;
+}
+
+.carousel-caption > span {
+    color: #fff !important;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-indicators > button {
+    background-color: #fff !important;
+}

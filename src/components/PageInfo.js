@@ -25,11 +25,11 @@ const gamePageInfo = (
 export default function GameInfo(props) {
     return (
         <div>
-            <Card data-bs-theme='dark' className={props.transition ? 'fade-out' : 'fade-in'} style={{ margin: '0 auto', maxWidth: '75rem' }}>
+            <Card data-bs-theme='dark' className={props.fadeOut ? 'fade-out' : 'fade-in'} style={{ margin: '0 auto', maxWidth: '75rem' }}>
                 <Card.Body>
                     <Card.Title>Welcome!</Card.Title>
                     <hr></hr>
-                    <Card.Text>
+                    <Card.Text as='div'>
                         {props.page === 'games' && gamePageInfo}
                     </Card.Text>
                 </Card.Body>
