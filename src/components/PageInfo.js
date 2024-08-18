@@ -10,7 +10,7 @@ const gamePageInfo = (
         <span>
             A lot of the games listed on here were developed in the Unity game engine, or as of recently, the Godot engine, and one in an engine I wrote myself. Depending on the icons associated with each game, you can either download these games through their itch.io page, or play them in browser!
         </span>
-        <br/>
+        <hr></hr>
         <div>
             <Controller size={24}></Controller> You can play games with this <b>controller</b> icon in browser.
         </div>
@@ -28,6 +28,7 @@ export default function GameInfo(props) {
             <Card data-bs-theme='dark' className={props.transition ? 'fade-out' : 'fade-in'} style={{ margin: '0 auto', maxWidth: '75rem' }}>
                 <Card.Body>
                     <Card.Title>Welcome!</Card.Title>
+                    <hr></hr>
                     <Card.Text>
                         {props.page === 'games' && gamePageInfo}
                     </Card.Text>

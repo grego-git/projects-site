@@ -41,11 +41,15 @@ export default function GameInfo(props) {
                 <Card.Body>
                     <Card.Title>{props.game.name}</Card.Title>
                     <Card.Subtitle className='mb-2 text-muted'>{props.game.engine} | {props.game.language}</Card.Subtitle>
+                    <hr></hr>
                     <Card.Text dangerouslySetInnerHTML={{ __html: props.game.description }}></Card.Text>
                     {props.game.screenshots && props.game.screenshots.length > 0 &&
-                        <Carousel responsive={responsive}>
-                            {props.game.screenshots.map((screenshot, index) => <img onClick={() => { openScreenshotModal(process.env.PUBLIC_URL + 'screenshots/' + screenshot) }} style={{ maxHeight: 250, margin: '0 auto', borderRadius: 15, display: 'block' }} alt={screenshot} key={index} src={process.env.PUBLIC_URL + 'screenshots/' + screenshot}></img>)}
-                        </Carousel>}
+                        <div>
+                            <hr></hr>
+                            <Carousel responsive={responsive}>
+                                {props.game.screenshots.map((screenshot, index) => <img onClick={() => { openScreenshotModal(process.env.PUBLIC_URL + 'screenshots/' + screenshot) }} style={{ maxHeight: 250, margin: '0 auto', borderRadius: 15, display: 'block' }} alt={screenshot} key={index} src={process.env.PUBLIC_URL + 'screenshots/' + screenshot}></img>)}
+                            </Carousel>
+                        </div>}
                     <br />
                     <div style={{ display: 'inline-flex', gap: 10 }}>
                         <Button variant='outline-secondary'>{
