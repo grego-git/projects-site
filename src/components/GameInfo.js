@@ -32,7 +32,7 @@ export default function GameInfo(props) {
                             <Carousel activeIndex={screenshotIndex} onSelect={handleSelect} interval={null}>
                                 {props.game.screenshots.map((screenshot, index) =>
                                     <Carousel.Item key={index}>
-                                        <img onClick={() => { setShowScreenshotModal(true) }} style={{ borderRadius: 15, display: 'block', maxHeight: 300, margin: '0 auto' }} alt={screenshot} src={process.env.PUBLIC_URL + 'screenshots/' + screenshot}></img>
+                                        <img onClick={() => { setShowScreenshotModal(true) }} style={{ borderRadius: 15, display: 'block', maxWidth: '100%', maxHeight: 300, margin: '0 auto' }} alt={screenshot} src={process.env.PUBLIC_URL + 'screenshots/' + screenshot}></img>
                                     </Carousel.Item>)}
                             </Carousel>
                         </div>}
