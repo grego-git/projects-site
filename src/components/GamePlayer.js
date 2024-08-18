@@ -13,7 +13,7 @@ export default function GamePlayer(props) {
             data-bs-theme='dark'
         >
             <Modal.Header closeButton>
-                <Modal.Title id='contained-modal-title-vcenter'>
+                <Modal.Title style={{color: 'white'}} id='contained-modal-title-vcenter'>
                     {props.game.name}
                 </Modal.Title>
             </Modal.Header>

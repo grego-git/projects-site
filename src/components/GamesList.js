@@ -29,7 +29,7 @@ export default function GamesList(props) {
 
         rows.push(
             <img key={0}
-                style={{ margin: '0 auto', maxHeight: 250, display: 'block', filter: 'drop-shadow(0 0 0.25rem black)' }}
+                className='avatar'
                 src={process.env.PUBLIC_URL + (props.currentGame === 0 ? 'miscImages/GregoLookAtYou.png' : 'miscImages/JustGrego.png')}
                 alt='grego'></img>);
 

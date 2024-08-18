@@ -12,12 +12,14 @@ export default function GamesView() {
   const [currentGame, setCurrentGame] = useState(0);
   const [changingGame, setChangingGame] = useState(false);
   const [showGamePlayer, setShowGamePlayer] = useState(false);
+  const [loadingGames, setLoadingGames] = useState(true);
 
   const loadGames = async () => {
     const response = await fetch(process.env.PUBLIC_URL + 'games.json');
     const json = await response.json();
 
     setGames(json);
+    setLoadingGames(false);
   }
 
   useEffect(() => {
@@ -25,8 +27,10 @@ export default function GamesView() {
   }, []);
 
   return (
-    <div style={{ margin: '0 auto', padding: '25px 0px 100px 0px' }}>
-      <GamesList games={games} currentGame={currentGame} setChangingGame={setChangingGame} setCurrentGame={setCurrentGame}></GamesList>
+    <div className='view'>
+      {loadingGames ? 
+      <div className='main-view-spinner-container'><Spinner style={{ color: 'white', margin: '0 auto' }} animation='grow' role='status'></Spinner></div> : 
+      <GamesList games={games} currentGame={currentGame} setChangingGame={setChangingGame} setCurrentGame={setCurrentGame}></GamesList>}
       <br />
       {currentGame === 0 &&
         <PageInfo page='games' fadeOut={changingGame}></PageInfo>}

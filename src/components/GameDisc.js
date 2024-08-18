@@ -30,17 +30,7 @@ export default function GameDisc(props) {
 
     return (
         <model-viewer
-            style={{
-                filter: 'drop-shadow(0 0 0.25rem black)',
-                margin: '0 auto',
-                minHeight: 250,
-                maxHeight: 250,
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                height: '100%',
-                width: '100%'
-            }}
+            class='cd-model-viewer'
             interaction='none'
             id={'disc_' + props.id}
             alt='game disc'
