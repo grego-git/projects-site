@@ -1,5 +1,21 @@
 [
     {
+        "name": "Fight the BIG Sandworm",
+        "engine": "Godot",
+        "language": "C#/.NET",
+        "created": "May 2024",
+        "cdCover": "SandwormCDCover.png",
+        "description": "Just a game where you fight a <b>BIG 'ol Sandworm</b>... like from Dune or somthin'. Also you play as a <b>Mech with a turret & missles</b>, so that's pretty cool.",
+        "requiresDownload" : true,
+        "source": "https://grego-games.itch.io/fight-the-big-sandworm",
+        "screenshots": [
+            "Sandworm_Title.png",
+            "Sandworm_1.png",
+            "Sandworm_2.png",
+            "Sandworm_3.png"
+        ]
+    },
+    {
         "name": "Keep the Change",
         "engine": "Godot",
         "language": "C#/.NET",
@@ -9,6 +25,7 @@
         "requiresDownload" : true,
         "source": "https://grego-games.itch.io/keep-the-change",
         "screenshots": [
+            "KeepTheChange_Title.png",
             "KeepTheChange_1.png",
             "KeepTheChange_2.png",
             "KeepTheChange_3.png",
@@ -25,6 +42,7 @@
         "requiresDownload" : true,
         "source": "https://grego-games.itch.io/kfpo",
         "screenshots": [
+            "KFPO_Title.png",
             "KFPO_1.png",
             "KFPO_2.png",
             "KFPO_3.png"
@@ -40,8 +58,10 @@
         "requiresDownload" : false,
         "source": "https://grego-games.itch.io/power-punch-training-mode",
         "gameLink": "https://itch.io/embed-upload/9176418?color=333333",
-        "gameWidth": 960,
-        "gameHeight": 560
+        "gameHeight": 560,
+        "screenshots": [
+            "PowerPunch_Title.png"
+        ]
     },
     {
         "name": "Christmasvania",
@@ -53,9 +73,9 @@
         "requiresDownload" : false,
         "source": "https://grego-games.itch.io/christmasvania",
         "gameLink": "https://itch.io/embed-upload/3142555?color=000000",
-        "gameWidth": 960,
         "gameHeight": 740,
         "screenshots": [
+            "Christmasvania_Title.png",
             "Christmasvania_1.png",
             "Christmasvania_2.png",
             "Christmasvania_3.png",
@@ -73,7 +93,7 @@
         "source": "https://grego-games.itch.io/ultra-caveman-spheres",
         "repo": "https://github.com/grego-git/UltraCavemanSpheresPrototype",
         "screenshots": [
-            "UCS_1.png",
+            "UCS_Title.png",
             "UCS_2.png"
         ]
     }
