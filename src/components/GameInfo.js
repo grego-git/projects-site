@@ -26,7 +26,7 @@ export default function GameInfo(props) {
                     <Card.Title>{props.game.name}</Card.Title>
                     <Card.Subtitle className='mb-2 text-muted'>{props.game.engine} | {props.game.language}</Card.Subtitle>
                     <hr></hr>
-                    <Card.Text dangerouslySetInnerHTML={{ __html: props.game.description }}></Card.Text>
+                    <Card.Text>{props.game.description}</Card.Text>
                     {props.game.screenshots && props.game.screenshots.length > 0 &&
                         <div>
                             <hr></hr>
