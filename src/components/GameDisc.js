@@ -26,6 +26,7 @@ export default function GameDisc(props) {
             if (!props.focused)
                 modelViewer.resetTurntableRotation(0);
         });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

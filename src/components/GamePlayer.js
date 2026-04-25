@@ -18,7 +18,7 @@ export default function GamePlayer(props) {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <iframe width='100%' frameborder='0' src={props.game.gameLink} allowfullscreen='' height={props.game.gameHeight}><a href={props.game.source}>Play on itch.io</a></iframe>
+                <iframe title="Game Player" width='100%' frameborder='0' src={props.game.gameLink} allowfullscreen='' height={props.game.gameHeight}><a href={props.game.source}>Play on itch.io</a></iframe>
             </Modal.Body>
         </Modal>
     );
