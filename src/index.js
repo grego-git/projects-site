@@ -46,7 +46,7 @@ export default function App() {
       <Stack direction='horizontal' gap={3} className='footer-bar'>
         <a target='_blank' rel='noopener' href='https://www.youtube.com/@grego4108'><Youtube color='white' size={24}></Youtube></a>
         <a target='_blank' rel='noopener' href='https://www.tiktok.com/@grego_io?lang=en'><Tiktok color='white' size={24}></Tiktok></a>
-        <a target='_blank' rel='noopener' href='https://grego-games.itch.io/'><img alt='itch.io' className='itch-icon' src={process.env.PUBLIC_URL + 'icons/itch-io.svg'}></img></a>
+        <a target='_blank' rel='noopener' href='https://goro-lab.itch.io/'><img alt='itch.io' className='itch-icon' src={process.env.PUBLIC_URL + 'icons/itch-io.svg'}></img></a>
         <a target='_blank' rel='noopener' href='https://github.com/grego-git'><Github color='white' size={24}></Github></a>
       </Stack>
     </>
